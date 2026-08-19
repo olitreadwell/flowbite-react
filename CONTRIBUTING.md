@@ -1,50 +1,96 @@
 # Contributing to Flowbite React
 
-First off, thank you for considering contributing to Flowbite React. It's people like you that make it a great library for everyone.
-
-Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project. In return, they should reciprocate that respect in addressing your issue, assessing changes, and helping you finalize your pull requests.
-
 ## Table of Contents
 
-- [Your First Code Contribution](#your-first-code-contribution)
-- [Improving The Documentation](#improving-the-documentation)
-- [Commit Message Format](#commit-message-format)
-- [Pull Request Process](#pull-request-process)
-- [Styleguides](#styleguides)
-  - [Code Style](#code-style)
-  - [Testing](#testing)
-  - [Changesets](#changesets)
+- [I Have a Question](#i-have-a-question)
+- [How to Contribute](#how-to-contribute)
+  - [Reporting Bugs](#reporting-bugs)
+  - [Suggesting Enhancements](#suggesting-enhancements)
+  - [Your First Code Contribution](#your-first-code-contribution)
+  - [Improving The Documentation](#improving-the-documentation)
+  - [Commit Message Format](#commit-message-format)
 
-## Your First Code Contribution
+## I Have a Question
 
-### Requirements
+> If you want to ask a question, we assume that you have read the available [Documentation](https://www.flowbite-react.com/docs/getting-started).
 
-- [Bun](https://bun.sh/) (the repo pins `bun@1.3.8` via the `packageManager` field in `package.json`)
-- [Node.js](https://nodejs.org/) (used by the Changesets release tooling)
+Before you ask a question, it is best to search for existing [issues](https://github.com/themesberg/flowbite-react/issues) that might help you. In case you have found a suitable issue and still need clarification, you can write your question in this issue. It is also advisable to search the internet for answers first.
 
-### Environment Setup and Development
+If you then still feel the need to ask a question and need clarification, we recommend the following:
 
-1. Fork the repository and clone your fork:
+- Open an [issue](https://github.com/themesberg/flowbite-react/issues/new).
+- Provide the Flowbite React version you are using.
+- Explain what the problem is.
 
+We will then take care of the issue as soon as possible.
+
+## How to Contribute
+
+> ### Legal Notice
+> When contributing to this project, you must agree that you have authored 100% of the content, that you have the necessary rights to the content and that the content you contribute may be provided under the project license.
+
+### Reporting Bugs
+
+#### Before Submitting a Bug Report
+
+A good bug report shouldn't leave others needing to chase you up for more information. Therefore, we ask you to investigate carefully, collect information and describe the issue in detail in your report. Please complete the following steps in advance to help us fix any potential bug as fast as possible.
+
+- Make sure that you are using the latest version.
+- Determine if your bug is really a bug and not an error on your side e.g. using incompatible environment components/versions (Make sure that you have read the [documentation](https://www.flowbite-react.com/docs/getting-started). If you are looking for support, you might want to check [this section](#i-have-a-question)).
+- To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](https://github.com/themesberg/flowbite-react/labels/%3Abug%3A%20bug).
+
+#### How Do I Submit a Good Bug Report?
+
+We use GitHub issues to track bugs and errors. If you run into an issue with the project:
+
+- Open an [issue](https://github.com/themesberg/flowbite-react/issues/new/choose). (Since we can't be sure at this point whether it is a bug or not, we ask you not to talk about a bug yet and not to label the issue.)
+  - Use the provided [bug template](https://github.com/themesberg/flowbite-react/issues/new?assignees=&labels=&projects=&template=bug_report.md).
+- Explain the behavior you would expect and the actual behavior.
+- Please provide as much context as possible and describe the *reproduction steps* that someone else can follow to recreate the issue on their own. This usually includes your code. For good bug reports you should isolate the problem and create a reduced test case.
+- Provide the information you collected in the previous section.
+
+### Suggesting Enhancements
+
+This section guides you through submitting an enhancement suggestion for Flowbite React, **including completely new features and minor improvements to existing functionality**. Following these guidelines will help maintainers and the community to understand your suggestion and find related suggestions.
+
+#### Before Submitting an Enhancement
+
+- Make sure that you are using the latest version.
+- Read the [documentation](https://www.flowbite-react.com/docs/getting-started) carefully and find out if the functionality is already covered, maybe by an individual configuration.
+- Perform a [search](https://github.com/themesberg/flowbite-react/issues) to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
+- Find out whether your idea fits with the scope and aims of the project. It's up to you to make a strong case to convince the project's developers of the merits of this feature. Keep in mind that we want features that will be useful to the majority of our users and not just a small subset. If you're just targeting a minority of users, consider writing an add-on/plugin library.
+
+#### How Do I Submit a Good Enhancement Suggestion?
+
+Enhancement suggestions are tracked as [GitHub issues](https://github.com/themesberg/flowbite-react/issues). Create an enhancement suggestion using the provided [feature request template](https://github.com/themesberg/flowbite-react/issues/new?assignees=&labels=&projects=&template=feature_request.md).
+
+- Use a **clear and descriptive title** for the issue to identify the suggestion.
+- Provide a **step-by-step description of the suggested enhancement** in as many details as possible.
+- **Describe the current behavior** and **explain which behavior you expected to see instead** and why. At this point you can also tell which alternatives do not work for you.
+- For GUIs, you may want to **include screenshots** which help you demonstrate the steps or point out the part which the suggestion is related to. Animated GIFS and videos may be helpful but are not expected. Some tools available are the [built-in screen recorder](https://support.apple.com/en-us/102618) on macOS, [LICEcap](https://www.cockos.com/licecap/) on macOS and Windows, and [ShareX](https://getsharex.com/) on Linux.
+- **Explain why this enhancement would be useful** to most Flowbite React users. You may also want to point out the other projects that solved it better and which could serve as inspiration.
+
+### Your First Code Contribution
+
+#### Requirements
+
+- [Bun](https://bun.sh/) (the repo pins `bun@1.3.8` in `package.json`)
+- [Node.js](https://nodejs.org/) (for the Changesets release tooling)
+
+#### Environment Setup and Development
+
+Follow the steps outlined in the [documentation](https://www.flowbite-react.com/docs/getting-started) or the steps below.
+1. Clone the repository using `git clone https://github.com/themesberg/flowbite-react`.
+2. Enter the repository directory and install dependencies.
    ```
-   git clone https://github.com/<your-username>/flowbite-react.git
    cd flowbite-react
-   ```
-
-2. Install dependencies:
-
-   ```
    bun install
    ```
-
-3. Start the development environment (Storybook and the docs site):
-
+3. Start the development environment (Storybook and the docs site).
    ```
    bun dev
    ```
-
-4. Run the checks before opening a pull request:
-
+4. Run the checks before opening a pull request.
    ```
    bun test
    bun lint
@@ -52,58 +98,28 @@ Following these guidelines helps to communicate that you respect the time of the
    bun format:check
    ```
 
-### Finding an Issue to Work On
+### Improving The Documentation
 
-Look for issues labeled [`good first issue`](https://github.com/themesberg/flowbite-react/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) or [`help wanted`](https://github.com/themesberg/flowbite-react/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22). Comment on the issue to let maintainers know you are working on it.
+The documentation site lives in the `apps/web` workspace of this repository. Run `bun dev:web` to preview it locally. Component docs, guides, and examples are welcome.
 
-## Improving The Documentation
+### Commit Message Format
 
-The documentation site lives in the `apps/web` workspace of this repository. Improvements to component docs, guides, and examples are welcome. Run `bun dev:web` to preview the docs site locally.
+    <type>(<scope>): <subject>
+    <BLANK LINE>
+    <body>[optional]
 
-## Commit Message Format
+*   **type:** feat | fix | docs | chore | revert
+    *   **feat:** A new feature
+    *   **fix:** A bug fix
+    *   **docs:** Documentation only changes
+    *   **chore:** Changes to build process, auxiliary tools, libraries, and other things
+    *   **revert:** A reversion to a previous commit
+*   **scope:** Anything specifying place of the commit change
+*   **subject:** What changes you have done
+    *   Use the imperative, present tense: "change" not "changed" nor "changes"
+    *   Don't capitalize first letter
+    *   No dot (.) at the end
+*   **body**: More details of your changes, you can mention the most important changes here
+    *   Use the imperative, present tense: "change" not "changed" nor "changes"
 
-This repository uses [Conventional Commits](https://www.conventionalcommits.org/):
-
-```
-<type>(<scope>): <subject>
-```
-
-- `type`: `feat`, `fix`, `docs`, `test`, `refactor`, `perf`, `chore`, `build`, `ci`, `style`
-- `scope`: the package or component the change affects, e.g. `cli`, `docs`, `Modal`, `Button`
-
-Examples from the repository history:
-
-- `fix(cli): update bin path to use relative path`
-- `fix(docs): accordion light/dark images to render in Safari`
-- `feat(Modal): add dismissible prop`
-
-## Pull Request Process
-
-1. Create a branch with a descriptive name, e.g. `fix/modal-close-button`.
-2. Make your changes and commit them with a Conventional Commits message.
-3. Run `bun test`, `bun lint`, `bun typecheck`, and `bun format:check` and make sure everything passes.
-4. If your change affects the published package's behavior or public API, add a changeset:
-
-   ```
-   bun changeset add
-   ```
-
-   Test-only and docs-only changes do not need a changeset.
-5. Open a pull request against `main` and fill out the pull request template.
-
-## Styleguides
-
-### Code Style
-
-- The repo uses [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) via turbo. Run `bun lint:fix` and `bun format` before committing.
-- Components live in `packages/ui/src/components/<ComponentName>/` with a sibling `<ComponentName>.test.tsx` test file.
-
-### Testing
-
-- Tests use [Vitest](https://vitest.dev/) and [React Testing Library](https://testing-library.com/react). Run the full suite with `bun test` or `bun test:coverage`.
-- New components must ship with tests covering rendering, class name merging, ref forwarding, and theme overrides, mirroring the sibling component tests.
-
-### Changesets
-
-- User-facing changes to the published package require a [Changesets](https://github.com/changesets/changesets) entry. Run `bun changeset add`, pick a bump level, and describe the change.
-- Maintainers run `bun changeset version` and `bun release` to version and publish from `main`.
+If you want to learn more, view the [Angular - Git Commit Guidelines](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines).
