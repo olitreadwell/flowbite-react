@@ -22,18 +22,20 @@ describe("Components / HelperText", () => {
       render(<HelperText>Some helper text</HelperText>);
 
       expect(helperText()).toHaveClass("text-gray-500");
+      expect(helperText()).toHaveClass("dark:text-gray-300");
     });
 
     it.each([
-      ["gray", "text-gray-500"],
-      ["info", "text-cyan-700"],
-      ["success", "text-green-600"],
-      ["failure", "text-red-600"],
-      ["warning", "text-yellow-500"],
-    ] as const)("should use `%s` color classes when passed", (color, expectedClass) => {
+      ["gray", "text-gray-500", "dark:text-gray-300"],
+      ["info", "text-cyan-700", "dark:text-cyan-800"],
+      ["success", "text-green-600", "dark:text-green-500"],
+      ["failure", "text-red-600", "dark:text-red-500"],
+      ["warning", "text-yellow-500", "dark:text-yellow-600"],
+    ] as const)("should use `%s` color classes when passed", (color, expectedClass, darkClass) => {
       render(<HelperText color={color}>Some helper text</HelperText>);
 
       expect(helperText()).toHaveClass(expectedClass);
+      expect(helperText()).toHaveClass(darkClass);
     });
   });
 
